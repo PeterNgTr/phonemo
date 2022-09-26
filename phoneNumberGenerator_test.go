@@ -141,12 +141,12 @@ func TestPhoneNumberGenerator_PhoneNumberGenerator(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			png := &PhoneNumberGenerator{
+			png := &PhoneData{
 				Country:         tt.fields.Country,
 				WithCountryCode: tt.fields.WithCountryCode,
 			}
 			if got := png.PhoneNumberGenerator(); len(got) != tt.want {
-				t.Errorf("PhoneNumberGenerator.PhoneNumberGenerator() = %v, want %v", got, tt.want)
+				t.Errorf("PhoneData.PhoneNumberGenerator() = %v, want %v", got, tt.want)
 			}
 		})
 	}

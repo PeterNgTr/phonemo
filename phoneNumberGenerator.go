@@ -56,12 +56,12 @@ func generatePhoneNumber(phoneNumberLength int) string {
 	return phoneNumber
 }
 
-type PhoneNumberGenerator struct {
+type PhoneData struct {
 	Country         string
 	WithCountryCode bool
 }
 
-func (png *PhoneNumberGenerator) PhoneNumberGenerator() string {
+func (png *PhoneData) PhoneNumberGenerator() string {
 	country := supportedCountry(png.Country)
 	phoneNumber := getRandom(phonePrefixMapping[country]) + generatePhoneNumber(phoneNumberLengthMapping[country])
 	if png.WithCountryCode == true {
