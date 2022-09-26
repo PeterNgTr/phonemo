@@ -1,3 +1,3 @@
-module github.com/peterngtr/phone-number-generator
+module github.com/peterngtr/phonemo
 
 go 1.16
